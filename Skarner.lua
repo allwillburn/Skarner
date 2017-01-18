@@ -86,7 +86,7 @@ OnTick(function (myHero)
         local BOTRK = GetItemSlot(myHero, 3150)
 
 	--AUTO LEVEL UP
-	if JaxMenu.AutoMode.Level:Value() then
+	if SkarnerMenu.AutoMode.Level:Value() then
 
 			spellorder = {_E, _W, _Q, _E, _W, _R, _W, _Q, _W, _Q, _R, _Q, _Q, _E, _E, _R, _E, _E}
 			if GetLevelPoints(myHero) > 0 then
