@@ -54,7 +54,7 @@ SkarnerMenu.LaneClear:Boolean("Q", "Use Q", true)
 SkarnerMenu.LaneClear:Boolean("W", "Use W", true)
 SkarnerMenu.LaneClear:Boolean("E", "Use E", true)
 SkarnerMenu.LaneClear:Boolean("RHydra", "Use RHydra", true)
-SkarnerMenu.LaneClear:Boolean("Tiamat", "Use Tiamat", true)
+
 
 SkarnerMenu:SubMenu("Harass", "Harass")
 SkarnerMenu.Harass:Boolean("Q", "Use Q", true)
