@@ -195,9 +195,6 @@ OnTick(function (myHero)
 	        	CastSkillShot(_E, target.pos)
 	        end
 
-                if SkarnerMenu.LaneClear.Tiamat:Value() and ValidTarget(closeminion, 350) then
-			CastSpell(Tiamat)
-		end
 	
 		if SkarnerMenu.LaneClear.RHydra:Value() and ValidTarget(closeminion, 400) then
                         CastSpell(RHydra)
