@@ -53,8 +53,7 @@ SkarnerMenu:SubMenu("LaneClear", "LaneClear")
 SkarnerMenu.LaneClear:Boolean("Q", "Use Q", true)
 SkarnerMenu.LaneClear:Boolean("W", "Use W", true)
 SkarnerMenu.LaneClear:Boolean("E", "Use E", true)
-SkarnerMenu.LaneClear:Boolean("RHydra", "Use RHydra", true)
-
+SkarnerMenu.LaneClear:Boolean("RHydra", "Use RHydra", true)Menu.LaneClear:Boolean("Tiamat", "Use Tiamat", true)
 
 SkarnerMenu:SubMenu("Harass", "Harass")
 SkarnerMenu.Harass:Boolean("Q", "Use Q", true)
@@ -86,7 +85,7 @@ OnTick(function (myHero)
         local BOTRK = GetItemSlot(myHero, 3150)
 
 	--AUTO LEVEL UP
-	if SkarnerMenu.AutoMode.Level:Value() then
+	if JaxMenu.AutoMode.Level:Value() then
 
 			spellorder = {_E, _W, _Q, _E, _W, _R, _W, _Q, _W, _Q, _R, _Q, _Q, _E, _E, _R, _E, _E}
 			if GetLevelPoints(myHero) > 0 then
@@ -195,6 +194,9 @@ OnTick(function (myHero)
 	        	CastSkillShot(_E, target.pos)
 	        end
 
+                if SkarnerMenu.LaneClear.Tiamat:Value() and ValidTarget(closeminion, 350) then
+			CastSpell(Tiamat)
+		end
 	
 		if SkarnerMenu.LaneClear.RHydra:Value() and ValidTarget(closeminion, 400) then
                         CastSpell(RHydra)
@@ -286,4 +288,3 @@ end
 
 
 print('<font color = "#01DF01"><b>Skarner</b> <font color = "#01DF01">by <font color = "#01DF01"><b>Allwillburn</b> <font color = "#01DF01">Loaded!')
-
