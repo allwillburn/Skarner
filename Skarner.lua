@@ -53,7 +53,8 @@ SkarnerMenu:SubMenu("LaneClear", "LaneClear")
 SkarnerMenu.LaneClear:Boolean("Q", "Use Q", true)
 SkarnerMenu.LaneClear:Boolean("W", "Use W", true)
 SkarnerMenu.LaneClear:Boolean("E", "Use E", true)
-SkarnerMenu.LaneClear:Boolean("RHydra", "Use RHydra", true)Menu.LaneClear:Boolean("Tiamat", "Use Tiamat", true)
+SkarnerMenu.LaneClear:Boolean("RHydra", "Use RHydra", true)
+SkarnerMenu.LaneClear:Boolean("Tiamat", "Use Tiamat", true)
 
 SkarnerMenu:SubMenu("Harass", "Harass")
 SkarnerMenu.Harass:Boolean("Q", "Use Q", true)
@@ -85,7 +86,7 @@ OnTick(function (myHero)
         local BOTRK = GetItemSlot(myHero, 3150)
 
 	--AUTO LEVEL UP
-	if JaxMenu.AutoMode.Level:Value() then
+	if SkarnerMenu.AutoMode.Level:Value() then
 
 			spellorder = {_E, _W, _Q, _E, _W, _R, _W, _Q, _W, _Q, _R, _Q, _Q, _E, _E, _R, _E, _E}
 			if GetLevelPoints(myHero) > 0 then
